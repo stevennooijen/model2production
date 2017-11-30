@@ -13,7 +13,9 @@ api = Api(app)
 parser = reqparse.RequestParser()
 parser.add_argument("sample_uuid", type=str)
 # add features for model
-for feature in ['user_age', 'body_length', 'channels']:
+for feature in ['approx_payout_date', 'body_length', 'channels', 'event_created', 'event_end',  'event_start',
+                'fb_published', 'has_analytics','has_logo', 'name_length', 'num_order', 'num_payouts', 'object_id',
+                'sale_duration2', 'show_map', 'user_age', 'user_created', 'user_type']:
     parser.add_argument(feature, type=int)
 
 
