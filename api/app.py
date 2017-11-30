@@ -20,7 +20,7 @@ for feature in ['user_age', 'body_length', 'channels']:
 class Predict(Resource):
     def __init__(self, *args, **kwargs):
         super(Predict, self).__init__(*args, **kwargs)
-        self.model_file = 'api/model.pkl'
+        self.model_file = 'api/best_model.pkl'
         self.load_model()
 
     def get(self):
